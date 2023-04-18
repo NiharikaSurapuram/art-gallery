@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+DATABASE = os.getenv('DATABASE')
 DATABASE_ENDPOINT = os.getenv('DATABASE_ENDPOINT')
 DATABASE_USER = os.getenv('DATABASE_USER')
 DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
@@ -17,7 +18,7 @@ print(DATABASE_USER)
 mydb = mysql.connector.connect(
     host=DATABASE_ENDPOINT,
     user=DATABASE_USER,
-    database="pes1ug20cs583_artgallery",
+    database=DATABASE,
     password=DATABASE_PASSWORD
 )
 c = mydb.cursor()
