@@ -2,10 +2,20 @@
 import mysql.connector
 import pandas as pd
 import streamlit as st
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DATABASE_ENDPOINT = os.getenv('DATABASE_ENDPOINT')
+DATABASE_USER = os.getenv('DATABASE_USER')
+
+print(DATABASE_ENDPOINT)
+print(DATABASE_USER)
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
+    host=DATABASE_ENDPOINT,
+    user=DATABASE_USER,
     database="pes1ug20cs583_artgallery"
 )
 c = mydb.cursor()
