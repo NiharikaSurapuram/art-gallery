@@ -9,6 +9,7 @@ load_dotenv()
 
 DATABASE_ENDPOINT = os.getenv('DATABASE_ENDPOINT')
 DATABASE_USER = os.getenv('DATABASE_USER')
+DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
 
 print(DATABASE_ENDPOINT)
 print(DATABASE_USER)
@@ -16,7 +17,8 @@ print(DATABASE_USER)
 mydb = mysql.connector.connect(
     host=DATABASE_ENDPOINT,
     user=DATABASE_USER,
-    database="pes1ug20cs583_artgallery"
+    database="pes1ug20cs583_artgallery",
+    password=DATABASE_PASSWORD
 )
 c = mydb.cursor()
 def add_artist_data(artist_id , artist_name, PIN,city,street,DOB,age,gallery_id):
