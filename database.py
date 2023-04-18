@@ -36,7 +36,10 @@ def view_all_artist_data():
     data = c.fetchall()
     return data
 
-
+def view_only_artist_names():
+    c.execute('SELECT artist_id FROM artist_583 order by artist_id ASC')
+    data = c.fetchall()
+    return data
 
 
 
