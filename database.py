@@ -2,24 +2,11 @@
 import mysql.connector
 import pandas as pd
 import streamlit as st
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-DATABASE = os.getenv('DATABASE')
-DATABASE_ENDPOINT = os.getenv('DATABASE_ENDPOINT')
-DATABASE_USER = os.getenv('DATABASE_USER')
-DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
-
-print(DATABASE_ENDPOINT)
-print(DATABASE_USER)
-
 mydb = mysql.connector.connect(
-    host=DATABASE_ENDPOINT,
-    user=DATABASE_USER,
-    database=DATABASE,
-    password=DATABASE_PASSWORD,
+    host="database-2.ckqwsilv80o5.us-east-2.rds.amazonaws.com",
+    user="admin",
+    database="pes1ug20cs583_artgallery",
+    password="niharika123",
     port=3306
 )
 c = mydb.cursor()
