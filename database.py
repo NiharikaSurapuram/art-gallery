@@ -19,7 +19,8 @@ mydb = mysql.connector.connect(
     host=DATABASE_ENDPOINT,
     user=DATABASE_USER,
     database=DATABASE,
-    password=DATABASE_PASSWORD
+    password=DATABASE_PASSWORD,
+    port=3306
 )
 c = mydb.cursor()
 def add_artist_data(artist_id , artist_name, PIN,city,street,DOB,age,gallery_id):
