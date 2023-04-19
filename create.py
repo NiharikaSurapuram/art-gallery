@@ -22,6 +22,6 @@ def create_artist():
 
     if st.button("Add Artist "):
         add_artist_data( artist_id , artist_name, PIN,city,street,DOB, gallery_id,age)
-        st.success("Successfully added Artist: {}".format(artist_id)).text_input(" Artist Id :")
+        st.success("Successfully added Artist: {}".format(artist_id))
 
 
