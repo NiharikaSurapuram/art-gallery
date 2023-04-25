@@ -3,7 +3,7 @@ import mysql.connector
 import pandas as pd
 import streamlit as st
 mydb = mysql.connector.connect(
-    host="database-2.ckqwsilv80o5.us-east-2.rds.amazonaws.com",
+    host="database-2.cxlyide3vq3e.us-east-1.rds.amazonaws.com",
     user="admin",
     database="pes1ug20cs583_artgallery",
     password="niharika123",
